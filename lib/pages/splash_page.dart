@@ -34,8 +34,10 @@ class _SplashPageState extends State<SplashPage> {
           width: 130,
           height: 150,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/image_splash.png'))),
+            image: DecorationImage(
+              image: AssetImage('assets/image_splash.png'),
+            ),
+          ),
         ),
       ),
     );
