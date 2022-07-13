@@ -36,7 +36,8 @@ class SignUpPage extends StatelessWidget {
     Widget nameInput() {
       return Container(
         margin: EdgeInsets.only(
-          top: 50,
+          // top: 50,
+          top: 30,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -260,7 +261,9 @@ class SignUpPage extends StatelessWidget {
         width: double.infinity,
         margin: EdgeInsets.only(top: 30),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           style: TextButton.styleFrom(
             backgroundColor: primaryColor,
             shape: RoundedRectangleBorder(
@@ -285,9 +288,7 @@ class SignUpPage extends StatelessWidget {
 
     Widget footer() {
       return Container(
-        margin: EdgeInsets.only(
-          bottom: 30,
-        ),
+        margin: EdgeInsets.only(bottom: 30, top: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -297,11 +298,16 @@ class SignUpPage extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-            Text(
-              'Sign In',
-              style: purpleTextStyle.copyWith(
-                fontSize: 12,
-                fontWeight: medium,
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                'Sign In',
+                style: purpleTextStyle.copyWith(
+                  fontSize: 12,
+                  fontWeight: medium,
+                ),
               ),
             ),
           ],
