@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:sepatuku/Widgets/chat_tile.dart';
 import 'package:sepatuku/theme.dart';
 
 class ChatPage extends StatelessWidget {
@@ -24,7 +25,7 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget content() {
+    Widget emptyChat() {
       return Expanded(
         child: Container(
           width: double.infinity,
@@ -56,6 +57,7 @@ class ChatPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
+              // ignore: sized_box_for_whitespace
               Container(
                 height: 44,
                 child: TextButton(
@@ -79,6 +81,23 @@ class ChatPage extends StatelessWidget {
                   ),
                 ),
               )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget content() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          color: backgroundColor3,
+          child: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
+            children: [
+              ChatTile(),
             ],
           ),
         ),
