@@ -87,7 +87,7 @@ class _MainPageState extends State<MainPage> {
                     left: 43,
                   ),
                   child: Image.asset(
-                    'assets/icon_whislist.png',
+                    'assets/icon_wishlist.png',
                     width: 20,
                     color: currentIndex == 2 ? primaryColor : Color(0xff808191),
                   ),
