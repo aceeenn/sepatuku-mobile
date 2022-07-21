@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:sepatuku/pages/cart_page.dart';
 import 'package:sepatuku/pages/detail_chat_page.dart';
 import 'package:sepatuku/pages/home/edit_profile_page.dart';
 import 'package:sepatuku/pages/home/main_page.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/detail-chat': (context) => DetailChatPage(),
         '/edit-profile': (context) => EditProfilePage(),
         '/product': (context) => ProductPage(),
+        '/cart': (context) => CartPage(),
       },
     );
   }
