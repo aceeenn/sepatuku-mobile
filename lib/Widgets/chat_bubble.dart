@@ -6,7 +6,7 @@ import 'package:sepatuku/theme.dart';
 
 class ChatBubble extends StatelessWidget {
   const ChatBubble({
-    Key? key,
+    Key key,
     this.text = '',
     this.isSender = false,
     this.hasProduct = false,

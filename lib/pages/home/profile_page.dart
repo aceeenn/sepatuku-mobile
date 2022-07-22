@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/theme.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  // const ProfilePage({Key? key}) : super(key: key);
 
   Widget header(BuildContext context) {
     return AppBar(

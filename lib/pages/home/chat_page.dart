@@ -5,7 +5,7 @@ import 'package:sepatuku/Widgets/chat_tile.dart';
 import 'package:sepatuku/theme.dart';
 
 class ChatPage extends StatelessWidget {
-  const ChatPage({Key? key}) : super(key: key);
+  // const ChatPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

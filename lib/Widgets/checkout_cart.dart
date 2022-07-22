@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/theme.dart';
 
 class CheckoutCart extends StatelessWidget {
-  const CheckoutCart({Key? key}) : super(key: key);
+  // const CheckoutCart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/theme.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({Key? key}) : super(key: key);
+  // const ProductCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

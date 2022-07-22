@@ -5,7 +5,7 @@ import 'package:sepatuku/Widgets/cart_card.dart';
 import 'package:sepatuku/theme.dart';
 
 class CartPage extends StatelessWidget {
-  const CartPage({Key? key}) : super(key: key);
+  // const CartPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

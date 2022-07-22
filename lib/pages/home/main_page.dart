@@ -8,7 +8,7 @@ import 'package:sepatuku/pages/home/profile_page.dart';
 import 'package:sepatuku/theme.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+  // const MainPage({Key? key}) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();

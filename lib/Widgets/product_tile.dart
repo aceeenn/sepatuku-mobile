@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/theme.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile({Key? key}) : super(key: key);
+  // const ProductTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

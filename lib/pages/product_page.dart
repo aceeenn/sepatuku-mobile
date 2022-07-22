@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/theme.dart';
 
 class ProductPage extends StatefulWidget {
-  const ProductPage({Key? key}) : super(key: key);
+  // const ProductPage({Key? key}) : super(key: key);
 
   @override
   State<ProductPage> createState() => _ProductPageState();

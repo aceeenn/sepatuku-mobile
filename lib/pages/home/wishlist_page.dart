@@ -5,7 +5,7 @@ import 'package:sepatuku/Widgets/wishlist_cart.dart';
 import 'package:sepatuku/theme.dart';
 
 class WishlistPage extends StatelessWidget {
-  const WishlistPage({Key? key}) : super(key: key);
+  // const WishlistPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
