@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:sepatuku/pages/cart_page.dart';
 import 'package:sepatuku/pages/checkout_page.dart';
+import 'package:sepatuku/pages/checkout_success_page.dart';
 import 'package:sepatuku/pages/detail_chat_page.dart';
 import 'package:sepatuku/pages/home/edit_profile_page.dart';
 import 'package:sepatuku/pages/home/main_page.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/product': (context) => ProductPage(),
         '/cart': (context) => CartPage(),
         '/checkout': (context) => CheckoutPage(),
+        '/checkout-success': (context) => CheckoutSuccessPage(),
       },
     );
   }
