@@ -1,12 +1,19 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sepatuku/theme.dart';
+
+import '../../models/user_model.dart';
+import '../../providers/auth_provider.dart';
 
 class ProfilePage extends StatelessWidget {
   // const ProfilePage({Key? key}) : super(key: key);
 
   Widget header(BuildContext context) {
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+    UserModel user = authProvider.user;
+
     return AppBar(
       backgroundColor: backgroundColor1,
       automaticallyImplyLeading: false,
@@ -19,8 +26,8 @@ class ProfilePage extends StatelessWidget {
           child: Row(
             children: [
               ClipOval(
-                child: Image.asset(
-                  'assets/image_profile.png',
+                child: Image.network(
+                  user.profilePhotoUrl,
                   width: 64,
                 ),
               ),
@@ -32,14 +39,14 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Halo, Kusnadi',
+                      'Halo, ${user.name}',
                       style: primaryTextStyle.copyWith(
                         fontSize: 24,
                         fontWeight: semiBold,
                       ),
                     ),
                     Text(
-                      '@kusnadi',
+                      '@${user.username}',
                       style: subtitleTextStyle.copyWith(
                         fontSize: 16,
                       ),

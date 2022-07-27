@@ -31,7 +31,7 @@ class AuthProvider with ChangeNotifier {
 
       return true;
     } catch (e) {
-      print(e.toString());
+      print(e);
       return false;
     }
   }
