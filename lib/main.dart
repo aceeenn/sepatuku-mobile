@@ -13,6 +13,7 @@ import 'package:sepatuku/pages/sign_in_page.dart';
 import 'package:sepatuku/pages/sign_up_page.dart';
 import 'package:sepatuku/pages/splash_page.dart';
 import 'package:sepatuku/providers/auth_provider.dart';
+import 'package:sepatuku/providers/product_provider.dart';
 import 'theme.dart';
 
 void main() => runApp(MyApp());
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => AuthProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
         ),
       ],
       child: MaterialApp(

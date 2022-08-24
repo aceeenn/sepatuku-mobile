@@ -6,17 +6,18 @@ import 'package:provider/provider.dart';
 import 'package:sepatuku/Widgets/product_card.dart';
 import 'package:sepatuku/Widgets/product_tile.dart';
 import 'package:sepatuku/providers/auth_provider.dart';
+import 'package:sepatuku/providers/product_provider.dart';
 import 'package:sepatuku/theme.dart';
 
 import '../../models/user_model.dart';
 
 class HomePage extends StatelessWidget {
   // const HomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
     UserModel user = authProvider.user;
+    ProductProvider productProvider = Provider.of<ProductProvider>(context);
 
     Widget header() {
       return Container(
@@ -247,12 +248,12 @@ class HomePage extends StatelessWidget {
                 width: defaultMargin,
               ),
               Row(
-                children: [
-                  ProductCard(),
-                  ProductCard(),
-                  ProductCard(),
-                ],
-              )
+                children: productProvider.products
+                    .map(
+                      (product) => ProductCard(product),
+                    )
+                    .toList(),
+              ),
             ],
           ),
         ),
