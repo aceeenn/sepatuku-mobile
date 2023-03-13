@@ -8,7 +8,7 @@ import 'package:sepatuku/providers/product_provider.dart';
 import 'package:sepatuku/theme.dart';
 
 class SplashPage extends StatefulWidget {
-  // const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({Key key}) : super(key: key);
 
   @override
   State<SplashPage> createState() => _SplashPageState();

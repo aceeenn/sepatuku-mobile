@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:cached_network_image/cached_network_image.dart';
+// import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sepatuku/Widgets/product_card.dart';
@@ -52,20 +52,6 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/edit-profile');
               },
-              // child: CachedNetworkImage(
-              //   imageUrl: user.profilePhotoUrl,
-              //   imageBuilder: (context, imageProvider) => Container(
-              //     decoration: BoxDecoration(
-              //       image: DecorationImage(
-              //         image: imageProvider,
-              //         fit: BoxFit.cover,
-              //       ),
-              //     ),
-              //   ),
-              //   errorWidget: (context, url, error) =>
-              //       Icon(Icons.error, color: Colors.red),
-              // ),
-
               child: Container(
                 width: 54,
                 height: 54,

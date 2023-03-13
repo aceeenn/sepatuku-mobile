@@ -37,6 +37,12 @@ class ProductCard extends StatelessWidget {
               height: 150,
               fit: BoxFit.cover,
             ),
+            // Image.network(
+            //   product.galleries[0].url,
+            //   width: 215,
+            //   height: 150,
+            //   fit: BoxFit.cover,
+            // ),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 20,
