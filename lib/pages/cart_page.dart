@@ -109,7 +109,7 @@ class CartPage extends StatelessWidget {
                     style: primaryTextStyle,
                   ),
                   Text(
-                    '\$287,96',
+                    'Rp 287,96',
                     style: priceTextStyle.copyWith(
                       fontWeight: semiBold,
                       fontSize: 16,

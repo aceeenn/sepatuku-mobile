@@ -186,7 +186,7 @@ class CheckoutPage extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\$575,96',
+                      'Rp 575,96',
                       style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
@@ -233,7 +233,7 @@ class CheckoutPage extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\$575.92',
+                      'Rp 575.92',
                       style: priceTextStyle.copyWith(
                         fontWeight: semiBold,
                       ),

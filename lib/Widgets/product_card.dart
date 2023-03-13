@@ -51,7 +51,7 @@ class ProductCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'hiking',
+                    product.category.name,
                     style: secondaryTextStyle.copyWith(
                       fontSize: 12,
                     ),
@@ -60,18 +60,19 @@ class ProductCard extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    'COURT VISION 2.0',
+                    product.name,
                     style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,
                     ),
                     overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                   ),
                   SizedBox(
                     height: 6,
                   ),
                   Text(
-                    '\$58,67',
+                    'Rp ${product.price}',
                     style: priceTextStyle.copyWith(
                       fontSize: 14,
                       fontWeight: medium,

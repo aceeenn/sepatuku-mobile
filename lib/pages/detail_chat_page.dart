@@ -89,7 +89,7 @@ class DetailChatPage extends StatelessWidget {
                     height: 2,
                   ),
                   Text(
-                    '\$57,15',
+                    'Rp 57,15',
                     style: priceTextStyle.copyWith(
                       fontWeight: medium,
                     ),
