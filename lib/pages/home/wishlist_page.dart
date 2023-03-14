@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sepatuku/Widgets/wishlist_cart.dart';
+import 'package:sepatuku/providers/wishlist_provider.dart';
 import 'package:sepatuku/theme.dart';
 
 class WishlistPage extends StatelessWidget {
@@ -9,6 +11,8 @@ class WishlistPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WishlistProvider wishlistProvider = Provider.of<WishlistProvider>(context);
+
     Widget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
@@ -89,11 +93,9 @@ class WishlistPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: defaultMargin,
             ),
-            children: [
-              WishlistCart(),
-              WishlistCart(),
-              WishlistCart(),
-            ],
+            children: wishlistProvider.wishlist
+                .map((product) => WishlistCart(product))
+                .toList(),
           ),
         ),
       );
@@ -103,7 +105,7 @@ class WishlistPage extends StatelessWidget {
       children: [
         header(),
         // emptyWishlist(),
-        content(),
+        wishlistProvider.wishlist.length == 0 ? emptyWishlist() : content(),
       ],
     );
   }

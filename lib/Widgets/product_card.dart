@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:sepatuku/models/product_model.dart';
 import 'package:sepatuku/theme.dart';
 
+import '../pages/product_page.dart';
+
 class ProductCard extends StatelessWidget {
   // const ProductCard({Key? key}) : super(key: key);
   final ProductModel product;
@@ -13,7 +15,12 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/product');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductPage(product),
+          ),
+        );
       },
       child: Container(
         width: 215,

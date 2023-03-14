@@ -16,6 +16,7 @@ import 'package:sepatuku/pages/sign_up_page.dart';
 import 'package:sepatuku/pages/splash_page.dart';
 import 'package:sepatuku/providers/auth_provider.dart';
 import 'package:sepatuku/providers/product_provider.dart';
+import 'package:sepatuku/providers/wishlist_provider.dart';
 import 'theme.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -45,6 +46,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => ProductProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => WishlistProvider(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -55,7 +59,6 @@ class MyApp extends StatelessWidget {
           '/home': (context) => MainPage(),
           '/detail-chat': (context) => DetailChatPage(),
           '/edit-profile': (context) => EditProfilePage(),
-          '/product': (context) => ProductPage(),
           '/cart': (context) => CartPage(),
           '/checkout': (context) => CheckoutPage(),
           '/checkout-success': (context) => CheckoutSuccessPage(),

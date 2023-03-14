@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sepatuku/models/product_model.dart';
+import 'package:sepatuku/pages/product_page.dart';
 import 'package:sepatuku/theme.dart';
 
 class ProductTile extends StatelessWidget {
@@ -13,7 +14,12 @@ class ProductTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/product');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductPage(product),
+          ),
+        );
       },
       child: Container(
         margin: EdgeInsets.only(
